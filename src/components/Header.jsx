@@ -18,7 +18,7 @@ const Header = () => {
             <nav className="container mx-auto flex justify-between items-center px-4">
                 <Link to="/" className="flex items-center space-x-3">
                     <img src={logo} alt="eCom Store Logo" className="h-12" />
-                    <span className="text-3xl font-extrabold font-serif">Lord eCom Store</span>
+                    <span className="text-xl sm:text-2xl md:text-3xl font-extrabold font-serif">Lord eCom Store</span>
                 </Link>
                 <div className="flex-grow"></div>
                 <div className="hidden md:flex items-center justify-center space-x-12">
