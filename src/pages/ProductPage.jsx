@@ -44,6 +44,7 @@ const ProductPage = () => {
     }
 
     const discount = product.price - product.discountedPrice;
+    const discountPercentage = ((product.price - product.discountedPrice) / product.price) * 100;
 
     return (
         <div className="max-w-2xl mx-auto p-6 bg-white shadow-md rounded-lg">
@@ -59,7 +60,7 @@ const ProductPage = () => {
             </p>
             {discount > 0 && (
                 <p className="text-red-600 text-lg mb-4">
-                    Discount: ${discount.toFixed(2)} (Original price: ${product.price})
+                    Discount: ${discount.toFixed(2)} ({discountPercentage.toFixed(2)}% off) (Original price: ${product.price.toFixed(2)})
                 </p>
             )}
             <div className="flex items-center space-x-2 mb-4">
