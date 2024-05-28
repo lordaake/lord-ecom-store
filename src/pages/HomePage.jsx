@@ -31,8 +31,8 @@ const HomePage = () => {
     };
 
     return (
-        <div className="container mx-auto py-8 px-4">
-            <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">Welcome to the Lord eCom Store</h1>
+        <div className="container mx-auto py-8 px-4 font-avenir">
+            <h1 className="text-4xl font-bold text-center text-gray-800 mb-8 text-darkblue-dark">Welcome to the Lord eCom Store</h1>
             <div className="mb-8">
                 <SearchBar onSearch={handleSearch} />
             </div>
