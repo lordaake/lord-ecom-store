@@ -40,7 +40,7 @@ const ProductPage = () => {
     };
 
     if (!product) {
-        return <Layout><p>Loading product...</p></Layout>;
+        return <p>Loading product...</p>;
     }
 
     const discount = product.price - product.discountedPrice;
