@@ -73,7 +73,7 @@ const CheckoutPage = () => {
                         <p className="text-2xl font-bold mb-4 sm:mb-0">Total: ${total}</p>
                         <button
                             onClick={handleCheckout}
-                            className="bg-primary text-white py-2 px-4 sm:px-6 rounded-lg hover:bg-primary-dark transition-all duration-200 w-full sm:w-auto"
+                            className="bg-primary text-black py-2 px-4 sm:px-6 rounded-lg hover:bg-primary-dark transition-all duration-200 w-full sm:w-auto"
                         >
                             Checkout
                         </button>
