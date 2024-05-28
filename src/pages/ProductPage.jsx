@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import Layout from '../components/Layout';
 import { CartContext } from '../context/CartContext';
 
 const ProductPage = () => {
@@ -84,7 +83,7 @@ const ProductPage = () => {
             >
                 Add to Cart
             </button>
-            {message && <p className="text-green-500 mt-4">{message}</p>} {/* Display the message */}
+            {message && <p className="text-green-500 mt-4">{message}</p>}
             {product.reviews && product.reviews.length > 0 && (
                 <div className="mt-8">
                     <h2 className="text-2xl font-bold text-gray-800 mb-4">Reviews</h2>
