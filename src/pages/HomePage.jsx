@@ -33,7 +33,7 @@ const HomePage = () => {
     return (
         <div className="container mx-auto py-8 px-4 font-avenir">
             <h1 className="text-2xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl font-bold text-center text-dark mb-8">
-                Indulge in Elegance at the Lord eCom Store
+                First Class Items for Sale
             </h1>
             <div className="mb-8">
                 <SearchBar onSearch={handleSearch} />
