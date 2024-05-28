@@ -32,7 +32,7 @@ const HomePage = () => {
 
     return (
         <div className="container mx-auto py-8 px-4 font-avenir">
-            <h1 className="text-4xl font-bold text-center text-dark mb-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-center text-dark mb-8">
                 Indulge in Elegance at the Lord eCom Store
             </h1>
             <div className="mb-8">
