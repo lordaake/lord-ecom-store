@@ -1,8 +1,60 @@
-# React + Vite
+# Lord eCom Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based e-commerce store showcasing and selling products online. This project demonstrates the use of React, React Router, Context API, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/lordaake/lord-ecom-store.git
+   cd lord-ecom-store
+   ```
+
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Features
+
+- Home page with product listing and search functionality.
+- Individual product pages with detailed information.
+- Shopping cart with add, remove, increment, and decrement functionalities.
+- Checkout page and success confirmation page.
+- Contact page with form validation.
+- Responsive design using Tailwind CSS.
+
+## Technologies Used
+
+- React
+- React Router
+- Context API
+- Tailwind CSS
+- Vite
+
+## Project Structure
+
+```
+src/
+├── assets/                 # Static assets like images
+├── components/             # Reusable components
+├── context/                # Context API files
+├── pages/                  # Page components
+├── styles/                 # Custom CSS files
+├── App.jsx                 # Main App component
+├── index.jsx               # Entry point
+```
+
+## Contact
+
+For any questions or suggestions, please contact Tord Åke Larsson at lordaake@protonmail.com.
+
+## License
+
+This project is licensed under the MIT License.
+```
