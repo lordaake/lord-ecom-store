@@ -1,10 +1,27 @@
-/** Header.jsx */
-
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaHome, FaEnvelope, FaShoppingCart } from 'react-icons/fa';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { CartContext } from '../context/CartContext';
 import logo from '../assets/logo.webp';
+
+const CartIcon = () => {
+    const { cart } = useContext(CartContext);
+
+    // Calculate total quantity of items in the cart
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+    return (
+        <div className="relative">
+            <FaShoppingCart className="text-3xl" />
+            {totalItems > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center">
+                    {totalItems}
+                </span>
+            )}
+        </div>
+    );
+};
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -31,7 +48,7 @@ const Header = () => {
                         <span>Contact</span>
                     </Link>
                     <Link to="/cart" className="flex items-center space-x-2 text-lg font-medium hover:text-gray-300 transition duration-300">
-                        <FaShoppingCart className="text-3xl" />
+                        <CartIcon />
                         <span>Cart</span>
                     </Link>
                 </div>
@@ -56,7 +73,7 @@ const Header = () => {
                         <span>Contact</span>
                     </Link>
                     <Link to="/cart" className="mt-4 ml-4 mr-4 flex items-center justify-center py-2 px-4 hover:text-gray-300 text-lg font-medium transition duration-300">
-                        <FaShoppingCart className="text-3xl mr-2" />
+                        <CartIcon />
                         <span>Cart</span>
                     </Link>
                 </div>
