@@ -1,5 +1,3 @@
-/** ContactPage */
-
 import React, { useState } from 'react';
 import ErrorModal from '../components/ErrorModal';
 
@@ -20,6 +18,7 @@ const ContactPage = () => {
 
     const [showModal, setShowModal] = useState(false);
     const [modalMessage, setModalMessage] = useState('');
+    const [successMessage, setSuccessMessage] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -58,6 +57,14 @@ const ContactPage = () => {
         e.preventDefault();
         if (validateForm()) {
             console.log(formData);
+            setFormData({
+                name: '',
+                subject: '',
+                email: '',
+                body: ''
+            });
+            setSuccessMessage('Your message has been submitted successfully!');
+            setTimeout(() => setSuccessMessage(''), 5000); // Clear the message after 5 seconds
         } else {
             setModalMessage('Please correct the errors in the form');
             setShowModal(true);
@@ -71,6 +78,7 @@ const ContactPage = () => {
     return (
         <div>
             <h1 className="text-3xl font-bold mb-4 text-center">Contact Us</h1>
+            {successMessage && <p className="text-green-500 text-center mb-4">{successMessage}</p>}
             <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
                 <div>
                     <label htmlFor="name" className="block text-sm font-medium">Full Name</label>
@@ -133,6 +141,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-
-
-

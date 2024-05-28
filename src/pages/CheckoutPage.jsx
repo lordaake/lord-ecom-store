@@ -1,3 +1,5 @@
+/** CheckoutPage */
+
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
@@ -30,19 +32,19 @@ const CheckoutPage = () => {
         <div className="container mx-auto px-4 py-8">
             <h1 className="text-4xl font-bold mb-6 text-center">Checkout</h1>
             {cart.length > 0 ? (
-                <div className="bg-white shadow-md rounded-lg p-6">
+                <div className="bg-white shadow-md rounded-lg p-6 max-w-3xl mx-auto">
                     <ul className="divide-y divide-gray-200 mb-6">
                         {cart.map((item) => (
-                            <li key={item.id} className="flex items-center py-4">
+                            <li key={item.id} className="flex flex-col sm:flex-row items-center py-4">
                                 <img
                                     src={item.image.url}
                                     alt={item.image.alt}
-                                    className="w-24 h-24 object-cover rounded-lg mr-4"
+                                    className="w-24 h-24 object-cover rounded-lg mr-4 mb-4 sm:mb-0"
                                 />
-                                <div className="flex-1">
+                                <div className="flex-1 text-center sm:text-left">
                                     <h2 className="text-2xl font-semibold">{item.title}</h2>
                                     <p className="text-lg text-primary">${item.discountedPrice.toFixed(2)}</p>
-                                    <div className="flex items-center space-x-2 mt-2">
+                                    <div className="flex justify-center sm:justify-start items-center space-x-2 mt-2">
                                         <button
                                             onClick={() => decrementQuantity(item.id)}
                                             className="bg-gray-200 text-gray-700 px-2 py-1 rounded"
@@ -67,11 +69,11 @@ const CheckoutPage = () => {
                             </li>
                         ))}
                     </ul>
-                    <div className="flex justify-between items-center">
-                        <p className="text-2xl font-bold">Total: ${total}</p>
+                    <div className="flex flex-col sm:flex-row justify-between items-center">
+                        <p className="text-2xl font-bold mb-4 sm:mb-0">Total: ${total}</p>
                         <button
                             onClick={handleCheckout}
-                            className="bg-primary text-white py-2 px-6 rounded-lg hover:bg-primary-dark transition-all duration-200"
+                            className="bg-primary text-white py-2 px-4 sm:px-6 rounded-lg hover:bg-primary-dark transition-all duration-200 w-full sm:w-auto"
                         >
                             Checkout
                         </button>
