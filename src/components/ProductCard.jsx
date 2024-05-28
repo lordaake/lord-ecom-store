@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
                         {discountPercentage.toFixed(2)}% off
                     </p>
                 )}
-                <p className="text-primary font-semibold mb-2">${product.discountedPrice.toFixed(2)}</p>
+                <p className="text-primary-dark font-semibold mb-2">${product.discountedPrice.toFixed(2)}</p>
                 <Link to={`/product/${product.id}`} className="text-accent hover:underline">
                     View Product
                 </Link>

@@ -43,7 +43,7 @@ const CheckoutPage = () => {
                                 />
                                 <div className="flex-1 text-center sm:text-left">
                                     <h2 className="text-2xl font-semibold">{item.title}</h2>
-                                    <p className="text-lg text-primary">${item.discountedPrice.toFixed(2)}</p>
+                                    <p className="text-lg text-primary-dark">${item.discountedPrice.toFixed(2)}</p>
                                     <div className="flex justify-center sm:justify-start items-center space-x-2 mt-2">
                                         <button
                                             onClick={() => decrementQuantity(item.id)}

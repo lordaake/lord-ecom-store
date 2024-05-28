@@ -14,7 +14,7 @@ const Header = () => {
     };
 
     return (
-        <header className="bg-primary text-white py-6 shadow-md font-avenir">
+        <header className="bg-primary text-black py-6 shadow-md font-avenir">
             <nav className="container mx-auto flex justify-between items-center px-4">
                 <Link to="/" className="flex items-center space-x-3">
                     <img src={logo} alt="eCom Store Logo" className="h-12" />

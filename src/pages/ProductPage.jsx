@@ -55,7 +55,7 @@ const ProductPage = () => {
                 <p>No image available</p>
             )}
             <p className="text-lg text-gray-600 mb-4">{product.description}</p>
-            <p className="text-2xl font-bold text-primary mb-4">
+            <p className="text-2xl font-bold text-primary-dark mb-4">
                 Price: ${product.discountedPrice.toFixed(2)}
             </p>
             {discount > 0 && (
@@ -80,7 +80,7 @@ const ProductPage = () => {
             </div>
             <button
                 onClick={addToCart}
-                className="bg-primary text-white py-2 px-6 rounded-lg hover:bg-primary-dark transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-light"
+                className="bg-primary text-black py-2 px-6 rounded-lg hover:bg-primary-dark transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-light"
             >
                 Add to Cart
             </button>

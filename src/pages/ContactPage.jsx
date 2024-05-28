@@ -131,7 +131,7 @@ const ContactPage = () => {
                     ></textarea>
                     {formErrors.body && <p className="text-red-500 text-sm">{formErrors.body}</p>}
                 </div>
-                <button type="submit" className="bg-primary text-white py-2 px-4 rounded">
+                <button type="submit" className="bg-primary text-black py-2 px-4 rounded">
                     Submit
                 </button>
             </form>
