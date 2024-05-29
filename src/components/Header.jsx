@@ -55,15 +55,15 @@ const Header = () => {
                 <div className="md:hidden flex items-center">
                     <button onClick={toggleMenu} className="focus:outline-none">
                         {menuOpen ? (
-                            <XMarkIcon className="h-8 w-8 text-white" />
+                            <XMarkIcon className="h-8 w-8 text-black" />
                         ) : (
-                            <Bars3Icon className="h-8 w-8 text-white" />
+                            <Bars3Icon className="h-8 w-8 text-black" />
                         )}
                     </button>
                 </div>
             </nav>
             {menuOpen && (
-                <div className="md:hidden bg-primary text-white text-center">
+                <div className="md:hidden bg-primary text-black text-center">
                     <Link to="/" className="mt-4 mb-4 ml-4 mr-4 flex items-center justify-center py-2 px-4 hover:text-gray-300 text-lg font-medium transition duration-300">
                         <FaHome className="text-3xl mr-2 " />
                         <span>Home</span>
