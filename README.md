@@ -3,6 +3,7 @@
 ![E-Commerce Store Screenshot](https://tordlarsson.com/assets/ecommerce-store-screenshot-BkU8oP6W.png)
 
 A React-based e-commerce store showcasing and selling products online. This project demonstrates the use of React, React Router, Context API, and Tailwind CSS.
+
 You can view the live site here: [E-Commerce Store Live Site](https://lord-ecom-store.netlify.app/)
 
 ## Installation
